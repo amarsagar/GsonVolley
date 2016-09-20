@@ -22,7 +22,7 @@ public class InfoAdapter extends ArrayAdapter {
     ArrayList<Contacts>contact;
     Context context;
     public InfoAdapter(Context context, int resource, ArrayList<Contacts>contact) {
-        super(context, resource);
+        super(context, resource,contact);
         this.contact=contact;
         this.context=context;
 
@@ -30,7 +30,7 @@ public class InfoAdapter extends ArrayAdapter {
 
     @Override
     public int getCount() {
-        return super.getCount();
+        return contact.size();
     }
 
     @Override

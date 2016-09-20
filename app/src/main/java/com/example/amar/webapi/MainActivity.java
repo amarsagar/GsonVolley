@@ -1,6 +1,7 @@
 package com.example.amar.webapi;
 
 import android.app.DownloadManager;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
         button=(Button)findViewById(R.id.webbtn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {ConnectWebService();
+            public void onClick(View v) {
+
+                ConnectWebService();
 
             }
         });
@@ -62,8 +65,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("size",contactWrapper.getContactlist().get(i).getAddress()+"");
                 Log.e("size",contactWrapper.getContactlist().get(i).getEmail()+"");
                 Log.e("size",contactWrapper.getContactlist().get(i).getGender()+"");
-                Log.e("size",contactWrapper.getContactlist().get(i).getPhonenumbers()+"");
+                Log.e("home num",contactWrapper.getContactlist().get(i).getPhonenumbers().getHome()+"");
             }
+
+
+            InfoAdapter adapter=new InfoAdapter(MainActivity.this,R.layout.listdata,contactWrapper.getContactlist());
+            listview.setAdapter(adapter);
+
 
 
         }

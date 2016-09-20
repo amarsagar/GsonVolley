@@ -17,7 +17,7 @@ public class Contacts {
     String email;
     @SerializedName("gender")
     String gender;
-    @SerializedName("phonenumber")
+    @SerializedName("phone")
     Phonenumber phonenumbers;
 
     public String getId() {

@@ -7,39 +7,39 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Phonenumber {
     @SerializedName("mobile")
-    int mobile;
+    String mobile;
     @SerializedName("home")
-    int home;
+    String home;
     @SerializedName("office")
-    int office;
+    String office;
 
-    public Phonenumber(int mobile, int office, int home) {
+    public Phonenumber(String mobile, String office, String home) {
         this.mobile = mobile;
         this.office = office;
         this.home = home;
     }
 
-    public int getMobile() {
+    public String getMobile() {
         return mobile;
     }
 
-    public void setMobile(int mobile) {
+    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 
-    public int getHome() {
+    public String getHome() {
         return home;
     }
 
-    public void setHome(int home) {
+    public void setHome(String home) {
         this.home = home;
     }
 
-    public int getOffice() {
+    public String getOffice() {
         return office;
     }
 
-    public void setOffice(int office) {
+    public void setOffice(String office) {
         this.office = office;
     }
 }
